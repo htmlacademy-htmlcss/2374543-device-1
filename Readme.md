@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Pavel Aleksandrov](https://up.htmlacademy.ru/htmlcss-individual/1/user/2374543).
-* Наставник: `Неизвестно`.
+* Наставник: [Ярослав Семененко](https://htmlacademy.ru/profile/ynsem).
 
 ---
 
