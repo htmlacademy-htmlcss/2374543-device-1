@@ -8,157 +8,179 @@
 
   <body>
     <header>
-      <img src="logo" alt="Логотип" srcset="">
+      <img src="logo" alt="Логотип">
+
+      <nav class="additional-nav">
+        <ul class="additional-nav-list">
+          <li class="additional-list-item additional-list-item-login visually-hiden">Войти</li>
+          <li class="additional-list-item additional-list-item-user">Имя пользователя</li>
+          <li class="additional-list-item additional-list-item-logout">Выйти</li>
+          <li class="additional-list-item additional-list-item-compare">Сравнить</li>
+          <li class="additional-list-item additional-list-item-basket">Корзина </li>
+        </ul>
+      </nav>
+
+      <section class="main-search">
+        <form action="post" class="main-search-form">
+          <label for="#">
+            <input type="text" id="#" class="main-search">
+          </label>
+          <button type="submit">Найти</button>
+        </form>
+      </section>
+
       <nav class="main-nav">
-        <ul>
-          <li>
-            <a href="Доставка"></a>
+        <ul class="main-nav-list">
+          <li class="main-nav-item">
+            <a href="#">Каталог товаров</a>
           </li>
           <li>
-            <a href="Гарантия"></a>
+            <a href="#">Доставка</a>
           </li>
           <li>
-            <a href="Контакты"></a>
+            <a href="#">Гарантия</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
           </li>
         </ul>
-
-        <a href="Каталог"></a>
-
-        <nav class="additional-nav">
-          <ul>
-            <li class="additional-list-item additional-list-item-log out"></li>
-            <li class="additional-list-item additional-list-item-compare"></li>
-            <li class="additional-list-item additional-list-item-basket"></li>
-          </ul>
-        </nav>
-
-        <section>
-          <form action="post" class="">
-            <label for="">
-              <input type="text">
-            </label>
-            <button type="submit"></button>
-          </form>
-        </section>
+    </header>
 
         <main>
+          <h1 class="visually-hiden">Каталог</h1>
 
           <section class="monopods">
             <h2>Моноподы для селфи</h2>
-            <a href="Главная"></a>
-            <a href="Каталог товаров"></a>
-            <a href="Моноподы для селфи"></a>
+            <ul class="bread-crumbs">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Каталог товаров</a></li>
+            <li><a href="#">Моноподы для селфи</a></li>
+          </ul>
           </section>
 
           <section class="filter">
-            <h3>Фильтр:</h3>
+            <h2>Фильтр:</h2>
+
             <div>
-              <q>Стоимость</q>
+              <p>Стоимость</p>
               <input name="currency-range" type="range" min="0" max="9000"/>
               <p>от 0</p>
               <p>до 5000</p>
             </div>
 
-            <div>
-              <q>Цвет</q>
-              <input name="colour-checkbox" type="checkbox" text="Черный"/>
-              <input name="colour-checkbox" type="checkbox" text="Белый"/>
-              <input name="colour-checkbox" type="checkbox" text="Синий"/>
-              <input name="colour-checkbox" type="checkbox" text="Красный"/>
-              <input name="colour-checkbox" type="checkbox" text="Розовый"/>
-            </div>
+            <form action="post" method="get">
 
-            <div>
-              <q>Bluetooth</q>
-              <input name="colour-checkbox" type="checkbox" text="Есть"/>
-              <input name="colour-checkbox" type="checkbox" text="Нет"/>
-            </div>
-          </section>
+              <fieldset>
+                <legend>Цвет</legend>
+                <input type="colour-checkbox" name="color-black" value="black" checked>
+                <label for="color-black">Черный</label><br>
+                <input type="colour-checkbox" name="color-white" value="white" checked>
+                <label for="color-white">Белый</label><br>
+                <input type="colour-checkbox" name="color-blue" value="blue">
+                <label for="color-blue">Синий</label><br>
+                <input type="colour-checkbox" name="color-red" value="red">
+                <label for="color-red">Красный</label><br>
+                <input type="colour-checkbox" name="color-pink" value="pink">
+                <label for="color-pink">Розовый</label><br><br>
+              </fieldset>
 
-          <button type="button" name="Show">Показать</button>
+              <fieldset>
+                <legend>Bluetooth</legend>
+                <input type="radio" id="yes" name="bluetooth-choise" value="yes" checked="checked">
+                <label for="yes">Есть</label><br>
+                <input type="radio" id="no" name="bluetooth-choise" value="no">
+                <label for="no">Нет</label><br><br>
+              </fieldset>
+
+              <button type="submit" value="show">Показать</button>
+            </form>
 
           <section class="sort">
-            <h4>Сортировка:</h4>
-            <p>Популярные</p>
-            <img src="Easy-selfie-stick" alt="Любительская селфи-палка" srcset="">
-            <q>Любительская селфи-палка</q>
-            <p>500 р</p>
-            <img src="Professional-selfie-stick" alt="Профессиональная селфи-палка" srcset="">
-            <q>Профессиональная селфи-палка</q>
-            <p>1 500 р</p>
-            <img src="Unsinkable-selfie-stick" alt="Непотопляемая селфи-палка" srcset="">
-            <q>Непотопляемая селфи-палка</q>
-            <p>2 500 р</p>
-            <img src="Follow-me-selfie-stick" alt="Следуй за мной селфи-палка" srcset="">
-            <q>Селфи-палка "Следуй за мной"</q>
-            <p>1 500 р</p>
+            <h2>Сортировка:</h2>
+
+            <select name="sort-name" id="popular">
+            <option value="popular">Популярные</option>
+            </select>
+
+            <button type="button">Upstairs</button>
+            <button type="button">Downstairs</button>
+
+            <section class="catalogue-list">
+              <ul class="catalogue-item">
+                <li>
+                  <img src="easy-selfie-stick" alt="Любительская селфи-палка">
+                  <p>Любительская селфи-палка</p>
+                  <span>500 р</span>
+                  <a href="#" class="visually-hiden">Подробнее</a>
+                </li>
+                <li>
+                  <img src="professional-selfie-stick" alt="Профессиональная селфи-палка">
+                  <p>Профессиональная селфи-палка</p>
+                  <span>1 500 р</span>
+                  <a href="#" class="visually-hiden">Подробнее</a>
+                </li>
+                <li>
+                <img src="unsinkable-selfie-stick" alt="Непотопляемая селфи-палка">
+                  <p>Непотопляемая селфи-палка</p>
+                  <span>2 500 р</span>
+                  <a href="#" class="visually-hiden">Подробнее</a>
+                </li>
+                <li>
+                  <img src="follow-me-selfie-stick" alt="Следуй за мной селфи-палка">
+                    <p>Селфи-палка "Следуй за мной</p>
+                    <span>1 500 р</span>
+                    <a href="#" class="visually-hiden">Подробнее</a>
+                  </li>
+              </ul>
           </section>
 
-          <div>
             <button type="button" name="show-more">Загрузить еще</button>
-          </div>
 
           <div>
             <button type="button" name="go-back">Назад</button>
-
-            <input id="radio-1" name="radio-1" type="radio" value="1"/>
-            <label for="radio-1">1</label><br />
-
-            <input id="radio-2" name="radio-2" type="radio" value="2"/>
-            <label for="radio-2">2</label><br />
-
-            <input id="radio-3" name="radio-3" type="radio" value="3"/>
-            <label for="radio-3">3</label>
-
-            <input id="radio-more" name="radio-more" type="radio" value="more"/>
-            <label for="radio-more">...</label>
-
-            <input id="radio-15" name="radio-15" type="radio" value="15" />
-            <label for="radio-15">15</label><br />
-
+            <button type="button" name="page-1">1</button>
+            <button type="button" name="page-2">2</button>
+            <button type="button" name="page-3">3</button>
+            <button type="button" name="page-4">4</button>
+            <button type="button" name="page-5">5</button>
+            <button type="button" name="page-6">6</button>
+            <button type="button" name="page-7">7</button>
+            <button type="button" name="page-8">8</button>
+            <button type="button" name="page-9">9</button>
+            <button type="button" name="page-10">10</button>
             <button type="button" name="go-next">Вперёд</button>
           </div>
-
         </main>
 
-        <footer>
-          <section class="Info">
-            <div>
-              <img src="logo-small" alt="Маленький логотип" srcset="">
+        <footer class="footer">
+          <div class="footer-adress">
+            <img src="logo-small" alt="Маленький логотип" />
             <p>Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-            <img src="yellow-line" alt="желтая полоса" srcset="">
-            </div>
+          </div>
 
-            <div>
-            <nav class="footer-nav">
-              <ul>
-                <li>
-                  <a href="Доставка"></a>
-                </li>
-                <li>
-                  <a href="Гарантия"></a>
-                </li>
-                <li>
-                  <a href="Контакты"></a>
-                </li>
-              </ul>
-              <ul>
-                <img src="logo-telegram" alt="Логотип Telegram" srcset="">
-               <button type="Telegram"></button>
-               <img src="logo-youtube" alt="Логотип YouTube" srcset="">
-               <button type="YouTube"></button>
-               <img src="logo-twitter" alt="Логотип Twitter" srcset="">
-               <button type="Twitter"></button>
-               </ul>
-               </nav>
-              </div>
+          <nav class="footer-nav">
+            <ul>
+              <li>
+                <a href="#">Доставка</a>
+              </li>
+              <li>
+                <a href="#">Гарантия</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+            <ul>
+            <a href="https://t.me/htmlacademy"><span class="visually-hiden">Telegram</span></a>
+            <a href="https://youtube.com/user/htmlacademyru"><span class="visually-hiden">YouTube</span></a>
+            <a href="https://twitter.com/htmlacademy_ru"><span class="visually-hiden">Twitter</span></a>
+             </ul>
+             </nav>
 
-               <div>
-                <p>Тел.: +7 (812) 812-12-12</p>
-                <img src="logo-html-academy" alt="Логотип Html академии" srcset="">
-               </div>
-
-          </section>
-        </footer>
+             <div>
+              <a href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+              <img src="logo-html-academy" alt="Логотип Html академии" srcset="">
+             </div>
+      </footer>
       </body>
     </html>
